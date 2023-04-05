@@ -1,4 +1,4 @@
-# Product-Description-Chatbot
+# IDRBT-Chatbot
 
 `rasa trian`
 
