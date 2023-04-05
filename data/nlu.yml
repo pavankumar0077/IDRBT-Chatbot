@@ -111,6 +111,6 @@ nlu:
       - find [best restaurants in london](topic)
       - Can you find [5g]
       - Hey may i know what is [5g]
-      # - search me about (topic)
+      - search me about [5g technology]
       # - search on this (topic)
       # - find this for me (topic)
