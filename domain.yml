@@ -1,0 +1,101 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - product_keywords
+  - out_of_scope
+  - fallback
+  - google_search
+responses:
+  utter_greet:
+    - text: Hey! I am IDRBT 5G Bot, How can i help you ?
+  # utter_goodbye:
+  #   - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by IDRBT Team.
+  utter_response_product_description:
+    - text: You know, I am one of the 5G chatbot which gives details about 5g.
+      buttons:
+        - title: Want to know more about 5G!
+          payload: Want to know more about 5G!
+        - title: No, Procced with my questions
+          payload: No, Procced with my questions
+  utter_deny_generation_proceed:
+    - text:
+        Ok no problem, whenever you want to write description or you need help
+        with your product description, I'm always here to help, Take Care!
+  utter_change_mood_happy:
+    - text:
+        I'm sorry to hear that, but I guarantee you when I write descriptions for
+        your product you're going to feel great! It's worth a shot!
+      buttons:
+        - title: Want to know more about 5G!
+          payload: Want to know more about 5G!
+        - title: No, Procced with my questions
+          payload: No, Procced with my questions
+  utter_ask_keywords:
+    - text:
+        "Great!! Just give me more than 3 keywords that describe your product
+        separated with commas like: jeans, blue, trendy, cotton"
+  utter_inform_generation:
+    - text: Perfect! Now I will generate a unique product description just for you!
+  utter_finish_process:
+    - text: Here you go! I hope you liked it.
+  utter_out_of_scope:
+    - text: I'm sorry, I don't understand what you're asking.
+  utter_fallback:
+    - text: I didn't quite understand that. Could you please rephrase or ask me
+        something else?
+  utter_search_results:
+    - text: |-
+        Here are the search results:
+
+        {search_results}
+  utter_default:
+    - text: Sorry, I didn't understand that. Can you please repeat?
+  utter_thanks:
+    - text: You're welcome. Do you need help with anything else?
+  utter_help:
+    - text: Sure, how can I help you?
+  utter_confirm:
+    - text: Do you confirm?
+  utter_submit:
+    - text: Thank you! Your details have been submitted.
+  utter_whatNext:
+    - text: "Hello! 5g stuff"
+      buttons:
+        - title: "Book a table"
+          payload: "/book_table"
+        - title: "See the menu"
+          payload: "/menu"
+
+  utter_goodbye:
+     - text: "Goodbye! Have a nice day."
+
+  utter_affirm:
+    - text: "Great! Is there anything else I can help you with?"
+      buttons:
+        - title: "Yes"
+          payload: "/yes"
+        - title: "No"
+          payload: "/no"
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_iamabot
+  - utter_response_product_description
+  - utter_ask_keywords
+  - utter_inform_generation
+  - action_product_description
+  - utter_finish_process
+  - utter_deny_generation_proceed
+  - utter_change_mood_happy
+  - action_google_search
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

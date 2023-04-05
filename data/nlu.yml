@@ -1,0 +1,116 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - whatNext
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - Ok, Let's Go!
+      - Take the Shot!
+      - Want to know more about 5G!
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - No, Not Today
+      - No, Procced with my questions
+  - intent: mood_great
+    examples: |
+      - perfect
+      - good
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  # - intent: product_keywords
+  #   examples: |found
+  #     - jeans, trendy, comfy
+  #     - shirt, red, short sleeve
+  #     - Ucraft, website builder, ecommerce
+  - intent: out_of_scope
+    examples: |
+      - Sorry, I don't understand
+      - I'm not sure what you mean
+      - That's not something I can help with
+      - Could you rephrase that?
+  - intent: fallback
+    examples: |
+      - I didn't get that
+      - Could you say that again?
+      - Sorry, what was that?
+  - intent: google_search
+    examples: |
+      - search for [cat pictures](topic)
+      - find [best restaurants in london](topic)
+      - Can you find [5g]
+      - Hey may i know what is [5g]
+      # - search me about (topic)
+      # - search on this (topic)
+      # - find this for me (topic)

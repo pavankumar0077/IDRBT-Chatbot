@@ -1,0 +1,11 @@
+version: "2.0"
+responses:
+  utter_out_of_scope:
+    - text: I'm sorry, I don't understand.
+  utter_fallback:
+    - text: I'm sorry, I didn't understand what you meant. Could you please try again?
+  utter_search_results:
+    - text: |-
+        Here are the search results:
+
+        {search_results}

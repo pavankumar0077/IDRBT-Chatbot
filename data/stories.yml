@@ -1,0 +1,55 @@
+version: "3.1"
+stories:
+  - story: happy path for generating product description
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_response_product_description
+      - intent: affirm
+      - action: utter_ask_keywords
+      - intent: product_keywords
+      - action: utter_inform_generation
+      - action: action_product_description
+      - action: utter_finish_process
+  - story: happy path deny generation proceed
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_response_product_description
+      - intent: deny
+      - action: utter_deny_generation_proceed
+  - story: mood unhappy for generating product description
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_change_mood_happy
+      - intent: affirm
+      - action: utter_ask_keywords
+      - intent: product_keywords
+      - action: utter_inform_generation
+      - action: action_product_description
+      - action: utter_finish_process
+  - story: mood unhappy and deny proceed of generating product description
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_change_mood_happy
+      - intent: deny
+      - action: utter_deny_generation_proceed
+  - story: Out of Scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+  - story: Fallback
+    steps:
+      - intent: fallback
+      - action: utter_fallback
+      
+  - story: Google search
+    steps:
+    - intent: google_search
+    - action: action_google_search
