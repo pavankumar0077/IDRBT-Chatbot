@@ -1,7 +1,5 @@
-# Product-Description-Chatbot
- 
-'rasa --version'
- 
+# IDRBT-Chatbot
+
 `rasa trian`
 
 `rasa shell`
